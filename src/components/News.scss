@@ -15,16 +15,31 @@
         align-items: center;
         gap: 1em;
         margin-left: 2em;
+        .news-title{
+            background-color: u.$white;
+            border-radius: .5em 0 0 .5em;
+            padding: .25em 1em;
+            color: u.$black;
+            font-size: 1.2em;
+        }
         .news-add-button{
-            background-color: u.$black-light;
-            color: u.$white;
+            display: flex;
+            align-items: center;
+            gap: .5em;
             font-size: 1em;
             padding: .5em;
             font-family: 'Poppins';
             font-weight: bold;
             border: none;
+            background-color: u.$black;
+            color: u.$white;
+            border: 2px solid u.$green-light;
+            transition: .2s;
             &:hover{
+                color: u.$black;
+                background-color: u.$green-light;
                 cursor: pointer;
+                transition: .2s;
             }
         }
     }
@@ -36,57 +51,73 @@
         border-radius: .5em;
         position: relative;
         color: u.$white;
+        overflow: hidden;
         .news-img{
             width: 20%;
-            position: absolute;
-            left: 0;
-            top: 0;
+            border-radius: .25em 0 0 .25em;
         }
         .news-info-container{
             display: flex;
             flex-direction: column;
-            margin-left: 25%;
+            margin-left: 1em;
+            justify-content: space-between;
             .news-text{
                 width: 75%;
             }
-            .news-createby-container{
+            .news-create-buttons-container{
                 display: flex;
-                flex-direction: column;
-                font-size: .8em;
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                .news-createby-user{
+                justify-content: space-between;
+                border-bottom: 2px solid u.$green-light;
+                .news-createby-container{
                     display: flex;
-                    align-items: center;
-                    gap: 1em;
-                    background-color: u.$white;
-                    color: u.$black;
-                    border-radius: 20px 0 0 20px;
-                    padding: .25em;
-                    .news-createby-name{
-                        padding-right: 1em;
+                    flex-direction: column;
+                    font-size: .8em;
+                    .news-createby-user{
+                        display: flex;
+                        align-items: center;
+                        gap: 1em;
+                        background-color: u.$green-light;
+                        color: u.$black;
+                        border-radius: 20px 0 0 20px;
+                        padding: .25em;
+                        .news-createby-name{
+                            padding-right: 1em;
+                            font-weight: bold;
+                            color: u.$black-light;
+                        }
+                        .news-createby-img{
+                            border-radius: 100%;
+                            width: 30px;
+                            border: 2px solid u.$black-light;
+                        }
                     }
-                    .news-createby-img{
-                        border-radius: 100%;
-                        width: 30px;
-                        border: 2px solid u.$black-light;
+                    .news-createby-date{
+                        text-align: right;
+                        margin: 1em;
+                        font-style: italic;
                     }
                 }
-                .news-createby-date{
-                    text-align: right;
-                    margin: 1em;
-                }
-            }
-            .news-buttons-container{
-                display: flex;
-                flex-direction: row;
-                gap: .5em;
-                .news-button{
-                    padding: .5em;
-                    border-radius: .5em;
-                    border: none;
-                    background-color: u.$green-light;
+                .news-buttons-container{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
+                    gap: .5em;
+                    margin-top: 1em;
+                    .news-button{
+                        padding: .5em;
+                        border: none;
+                        background-color: u.$green-light;
+                        font-weight: bold;
+                        font-family: 'Poppins';
+                        transition: .2s;
+                        height: 40px;
+                        &:hover{
+                            color: u.$green-light;
+                            background-color: u.$black-light;
+                            cursor: pointer;
+                            transition: .2s;
+                        }
+                    }
                 }
             }
         }

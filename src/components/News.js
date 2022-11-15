@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+import { PlusCircle } from "phosphor-react";
+
 import './News.scss';
 
 export default function News(){
@@ -51,26 +53,34 @@ export default function News(){
     return(
         <div className='news'>
             <div className='news-add-container'>
-                <h2>Noticias</h2>
-                <button className='news-add-button'>AGREGAR NOTICIA</button>
+                <h2 className='news-title'>Noticias</h2>
+                <button className='news-add-button'>
+                    <PlusCircle size={32} />
+                    <span>NUEVA NOTICIA</span>
+                </button>
             </div>
             {news?.map(n =>
                 <div className='news-container'>
                     <img className='news-img' src={n.img} alt={n.title}/>
                     <div className='news-info-container'>
-                        <h3 className='news-title'>{n.title}</h3>
+                        <h3 className='news-info-title'>{n.title}</h3>
                         <p className='news-text'>{n.text.slice(0, 140)}...</p>
-                        <div className='news-createby-container'>
-                            <div className='news-createby-user'>
-                                <img className='news-createby-img' src={n.creator.img} alt={n.creator.name} />
-                                <p className='news-createby-name'>{n.creator.name}</p>
+                        <div className='news-create-buttons-container'>
+
+                            <div className='news-buttons-container'>
+                                <button className='news-button'>VER DETALLE</button>
+                                <button className='news-button'>EDITAR</button>
+                                <button className='news-button'>ELIMINAR</button>
                             </div>
-                            <p className='news-createby-date'>{n.creator.date}</p>
-                        </div>
-                        <div className='news-buttons-container'>
-                            <button className='news-button'>VER DETALLE</button>
-                            <button className='news-button'>EDITAR</button>
-                            <button className='news-button'>ELIMINAR</button>
+
+                            <div className='news-createby-container'>
+                                <div className='news-createby-user'>
+                                    <img className='news-createby-img' src={n.creator.img} alt={n.creator.name} />
+                                    <p className='news-createby-name'>{n.creator.name}</p>
+                                </div>
+                                <p className='news-createby-date'>{n.creator.date}</p>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>    
