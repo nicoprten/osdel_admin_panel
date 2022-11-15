@@ -1,0 +1,21 @@
+@use './utilities.scss' as u;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: u.$white;
+    color: u.$black;
+    h1{
+        display: none;
+    }
+    ul{
+        list-style-type: none;
+    }
+    a{
+        text-decoration: none;
+    }
+}
