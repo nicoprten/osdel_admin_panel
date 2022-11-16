@@ -19,3 +19,19 @@ body{
         text-decoration: none;
     }
 }
+
+.button-go-back{
+    color: u.$white;
+    height: 100%;
+    display: inline-block;
+    border-radius: .5em;
+    transition: .2s;
+    &:hover{
+        background-color: u.$green-light;
+        color: u.$black;
+        transition: .2s;
+    }
+    svg{
+        vertical-align: middle;
+    }
+}

@@ -8,7 +8,7 @@
     gap: 2em;
     padding: 2em;
     width: 80vw;
-    margin: 0 auto;
+    margin: 2em auto;
     border-radius: .5em;
     .news-add-container{
         display: flex;
@@ -30,7 +30,7 @@
             padding: .5em;
             font-family: 'Poppins';
             font-weight: bold;
-            border: none;
+            border-radius: 0 0.5em 0.5em 0;
             background-color: u.$black;
             color: u.$white;
             border: 2px solid u.$green-light;
@@ -61,8 +61,21 @@
             flex-direction: column;
             margin-left: 1em;
             justify-content: space-between;
+            width: 100%;
             .news-text{
-                width: 75%;
+                font-size: .9em;
+            }
+            .news-see-more{
+                color: u.$green-light;
+                background-color: transparent;
+                padding: .25em;
+                border-radius: .5em;
+                border: none;
+                margin-left: .5em;
+                &:hover{
+                    cursor: pointer;
+                    background-color: u.$green-dark;
+                }
             }
             .news-create-buttons-container{
                 display: flex;
@@ -106,14 +119,18 @@
                     .news-button{
                         padding: .5em;
                         border: none;
-                        background-color: u.$green-light;
+                        background-color: u.$black-light;
+                        color: u.$green-light;
+                        border: 2px solid u.$green-light;
+                        border-bottom: none;
+                        border-radius: 0.25em 0.25em 0 0;
                         font-weight: bold;
                         font-family: 'Poppins';
                         transition: .2s;
                         height: 40px;
                         &:hover{
-                            color: u.$green-light;
-                            background-color: u.$black-light;
+                            color: u.$black-light;
+                            background-color: u.$green-light;
                             cursor: pointer;
                             transition: .2s;
                         }
