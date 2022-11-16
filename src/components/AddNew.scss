@@ -23,6 +23,66 @@
                 margin-top: .5em;
                 font-size: .9em;
             }
+            .add-new-form-container{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                margin-top: 2em;
+                font-size: .8em;
+                input:first-child{
+                    padding: 1em;
+                    border: 2px solid u.$white;
+                    border-radius: .5em;
+                    color: u.$white;
+                    background-color: transparent;
+                }
+                textarea{
+                    height: 200px;
+                    padding: 1em;
+                    border: 2px solid u.$white;
+                    border-radius: .5em;
+                    color: u.$white;
+                    background-color: transparent;
+                }
+                input[type="file"]{
+                    color: u.$green-light;
+                }
+                input[type="file"]::-webkit-file-upload-button{
+                    background-color: u.$green-light;
+                    border-radius: .25em;
+                    font-weight: bold;
+                    padding: .5em;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+            .add-new-button{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                color: u.$green-light;
+                border: 2px solid u.$green-light;
+                border-radius: .25em;
+                background-color: transparent;
+                font-weight: bold;
+                width: 100px;
+                margin-top: 2em;
+                transition: .2s;
+                &:hover{
+                    color: u.$black;
+                    border-color: u.$green-light;
+                    background-color: u.$green-light;
+                    cursor: pointer;
+                    transition: .2s;
+                }
+                &:hover svg{
+                    color: u.$black;
+                }
+                svg{
+                    color: u.$green-light;
+                }
+            }
         }
     }
 }

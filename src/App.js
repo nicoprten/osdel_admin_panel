@@ -10,15 +10,23 @@ import MedicalChart from './components/MedicalChart';
 // import LogIn from './components/LogIn';
 // import CreateAccount from './components/CreateAccount';
 
+import { Amplify } from 'aws-amplify';
+
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+
+import awsExports from './aws-exports';
+Amplify.configure(awsExports);
+
 import './index.scss';
 
-export default function App(){
+function App({signOut,user}){
 
     return(
         <>
             <h1>Osdel</h1>
             <Routes>
-                <Route path={'/'} element={<FirstMenu />} />
+                <Route path={'/'} element={<FirstMenu user={user} signOut={signOut}/>} />
                 <Route path={'/noticias'} element={<News />} />
                 <Route path={'/noticias/agregar'} element={<AddNew />} />
                 <Route path={'/autorizaciones'} element={<Auths />} />
@@ -31,3 +39,5 @@ export default function App(){
         </>
     )
 }
+
+export default withAuthenticator(App);
