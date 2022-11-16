@@ -119,11 +119,12 @@
                     .news-button{
                         padding: .5em;
                         border: none;
-                        background-color: u.$black-light;
+                        background-color: u.$black;
                         color: u.$green-light;
                         border: 2px solid u.$green-light;
                         border-bottom: none;
                         border-radius: 0.25em 0.25em 0 0;
+                        font-size: .8em;
                         font-weight: bold;
                         font-family: 'Poppins';
                         transition: .2s;

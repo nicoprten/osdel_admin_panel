@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3osdelappstoragec8e6d9ce",
+  "bucketName": "osdelapp-storage-c8e6d9ce",
+  "policyUUID": "a1c4b23b",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}

@@ -2,7 +2,10 @@ import { Link } from 'react-router-dom';
 
 import './FirstMenu.scss';
 
-export default function FirstMenu(){
+export default function FirstMenu({signOut, user}){
+
+    console.log(user)
+    console.log(signOut)
 
     return(
         <div className='first-menu-container'>
@@ -13,6 +16,7 @@ export default function FirstMenu(){
                 <li className='first-menu-item'><Link className='first-menu-link' to='/autorizaciones'>AUTORIZACIONES</Link></li>
                 <li className='first-menu-item'><Link className='first-menu-link' to='/cartilla'>CARTILLA MÉDICA</Link></li>
             </ul>
+            <button onClick={() => signOut()}>signout</button>
         </div>
     )
 }

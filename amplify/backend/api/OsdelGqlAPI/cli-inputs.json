@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "OsdelGqlAPI",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "C:\\Users\\Felipe\\Documents\\Mariano\\Apps\\OsdelMobileApp\\OsdelAppMobile\\amplify\\backend\\api\\OsdelGqlAPI\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7,
+      "apiKeyExpirationDate": "2022-11-09T14:42:03.484Z",
+      "keyDescription": "OsdelGqlAPI"
+    },
+    "conflictResolution": {}
+  }
+}
