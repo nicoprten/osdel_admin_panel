@@ -4,6 +4,7 @@ import {Routes, Route} from 'react-router-dom';
 // COMPONENTS
 import FirstMenu from './components/FirstMenu';
 import News from './components/News';
+import AddNew from './components/AddNew';
 import Auths from './components/Auths';
 import MedicalChart from './components/MedicalChart';
 // import LogIn from './components/LogIn';
@@ -19,6 +20,7 @@ export default function App(){
             <Routes>
                 <Route path={'/'} element={<FirstMenu />} />
                 <Route path={'/noticias'} element={<News />} />
+                <Route path={'/noticias/agregar'} element={<AddNew />} />
                 <Route path={'/autorizaciones'} element={<Auths />} />
                 <Route path={'/cartilla'} element={<MedicalChart />} />
 

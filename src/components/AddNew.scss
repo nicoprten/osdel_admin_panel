@@ -1,0 +1,28 @@
+@use './../utilities.scss' as u;
+
+.add-new-container{
+    background-color: u.$black;
+    color: u.$white;
+    padding: 2em;
+    margin: 2em auto;
+    width: 80vw;
+    border-radius: .5em;
+    .add-new-intro-container{
+        display: flex;
+        gap: 2em;
+        .add-new-title-container{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            width: 100%;
+            .add-new-title{
+                border-bottom: 2px solid u.$white;
+                width: 25%;
+            }
+            .add-new-desc{
+                margin-top: .5em;
+                font-size: .9em;
+            }
+        }
+    }
+}

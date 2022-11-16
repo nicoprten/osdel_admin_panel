@@ -9,7 +9,7 @@ export default function News(){
     let news = [
         {
             title: 'New 01',
-            text: 'Gaming & eSports Dashboard designed by Boris Wick for R A G E B I T E. Connect with them on Dribbble; the global community for designers and creative professionals.',
+            text: 'Gaming & eSports Dashboard designed by Boris Wick for R A G E B I T E.',
             img: 'https://i.pinimg.com/originals/42/92/75/429275a65b73c528a6fbf33c08ca06e1.png',
             creator: {
                 name: 'Nicolino Jejote',
@@ -54,17 +54,26 @@ export default function News(){
         <div className='news'>
             <div className='news-add-container'>
                 <h2 className='news-title'>Noticias</h2>
-                <button className='news-add-button'>
+                <Link className='news-add-button' to='/noticias/agregar'>
                     <PlusCircle size={32} />
                     <span>NUEVA NOTICIA</span>
-                </button>
+                </Link>
             </div>
             {news?.map(n =>
                 <div className='news-container'>
                     <img className='news-img' src={n.img} alt={n.title}/>
                     <div className='news-info-container'>
                         <h3 className='news-info-title'>{n.title}</h3>
-                        <p className='news-text'>{n.text.slice(0, 140)}...</p>
+                        {n.text.length > 140 ?
+                            <>
+                                <p className='news-text'>
+                                    {n.text.slice(0, 140)}...
+                                    <button className='news-see-more'>Ver más</button>
+                                </p>
+                                
+                            </>
+                            :
+                            <p className='news-text'>{n.text}</p>}
                         <div className='news-create-buttons-container'>
 
                             <div className='news-buttons-container'>
